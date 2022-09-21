@@ -1,0 +1,33 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<div class="mainDiv">
+    <div class="divs"> <span>Div#1</span>
+    </div>
+    <div class="divs"> <span>Div#2</span>
+    </div>
+    <div class="divs"> <span>Div#3</span>
+    </div>
+</div>
+<style>
+.divs {
+    border: 1.0px solid rgb(204, 204, 204);
+    border-radius: 10.0px 10.0px 10.0px 10.0px;
+    display: block;
+    width: 100px;
+    border-radius:5px;
+    }
+    .divs:hover, #selected_divs, .QuickStartLong:hover {
+        border: 2px solid rgb(184, 225, 252);
+    }
+    .highlight {
+      background: rgb(184, 225, 252);
+    }
+</style>
+<script>
+$(document).ready(function() {
+  $Divs = $(".divs");
+  $Divs.click(function() {
+    $Divs.removeClass("highlight");
+    $(this).addClass("highlight");
+  });
+});
+</script>
